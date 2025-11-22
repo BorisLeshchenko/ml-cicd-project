@@ -1,7 +1,8 @@
 pandas
-numpy
+numpy==1.26.4
 scikit-learn
 mlflow
 deepchecks
-evidently
+evidently==0.4.25
 jupyter
+anywidget
