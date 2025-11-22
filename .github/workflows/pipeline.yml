@@ -14,7 +14,7 @@ jobs:
     
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       
       - name: Set up Python
         uses: actions/setup-python@v4
@@ -32,13 +32,13 @@ jobs:
           jupyter nbconvert --to notebook --execute notebooks/train_model.ipynb --output notebooks/train_model_executed.ipynb
       
       - name: Upload artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: reports
           path: reports/
       
       - name: Upload executed notebook
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: executed-notebook
           path: notebooks/train_model_executed.ipynb
