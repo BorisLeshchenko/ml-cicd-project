@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# MLflow
+mlruns/
+.mlflow
+
+# IDE
+.vscode/
+.idea/
+
+# Data
+data/*.csv
+data/*.parquet
+
+# Reports
+reports/*.html
+reports/*.json
+
+# System
+.DS_Store
