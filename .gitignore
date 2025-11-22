@@ -32,3 +32,6 @@ reports/*.json
 
 # System
 .DS_Store
+ 
+# Virtual environment
+venv/
