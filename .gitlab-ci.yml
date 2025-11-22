@@ -1,0 +1,22 @@
+stages:
+  - train
+
+train_job:
+  stage: train
+  image: python:3.12
+  
+  script:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+    - pip install jupyter nbconvert
+    - jupyter nbconvert --to notebook --execute notebooks/train_model.ipynb --output-dir=notebooks
+  
+  artifacts:
+    paths:
+      - reports/
+      - notebooks/train_model.ipynb
+    expire_in: 30 days
+  
+  only:
+    - main
+
